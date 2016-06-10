@@ -8,9 +8,9 @@ These are my confiles. they are organised with stow hierarchy in order to be eas
 ## TODO
 
  - [x] i3
- - [ ] vim
+ - [x] vim
  - [ ] mutt
- - [ ] zsh
- - [ ] weehat
+ - [x] zsh
+ - [ ] weechat
  - [ ] X
 

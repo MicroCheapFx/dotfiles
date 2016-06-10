@@ -1,0 +1,210 @@
+set nocompatible
+set hidden
+filetype off
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" VUNDLE - https://github.com/VundleVim/Vundle.vim#about
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+"Plugin 'ervandew/supertab'
+"
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultiSnips'
+Plugin 'honza/vim-snippets'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'Raimondi/delimitMate'
+Plugin 'vim-ctrlspace/vim-ctrlspace'
+
+"Plugin 'majutsushi/tagbar'
+
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
+
+Plugin 'Bling/vim-airline'
+
+"Plugin 'kevinw/pyflakes'
+"Plugin 'honza/vim-snippets'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or justi PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" see :h vundle for more details or wiki for FAQ
+
+"Bundle 'ervandew/supertab'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'SirVer/ultisnips'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	YouCompleteMe - https://github.com/Valloric/YouCompleteMe
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
+" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" utilsnips - https://github.com/SirVer/ultisnips
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+""" Django Settings
+"let g:UltiSnipsExpandTrigger       = "<c-j>"
+"let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+"let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
+let g:UltiSnipsUsePythonVersion	= 2
+let g:UltiSnipsSnippetsDirectory = ["ultiSnips"]
+
+
+:
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" EasyMotion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-s2)
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" syntastic - https://github.com/scrooloose/syntastic.git
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_flake8_args='--ignore=E501,E123,E126'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" NERDTree-Tabs - https://github.com/jistr/vim-nerdtree-tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=0
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" NERDTree-Tabs - https://github.com/jistr/vim-nerdtree-tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:nerdtree_tabs_smart_startup_focus=1
+autocmd VimLeave * NERDTreeClose
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+:map <Leader>n :NERDTreeTabsToggle<CR>
+
+
+
+syn	on
+set	syntax=on
+set	nu
+"set	mouse=a
+set	showmatch
+set tabstop =4
+set shiftwidth =4
+set softtabstop =4
+set	hlsearch
+
+let mapleader = ","
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+filetype indent plugin on
+colorscheme darkblue
+":map <F2> :w\|!python %<CR>
+
+" J+K as Escape key
+:imap jk <Esc>
+
+":map  :buffers<CR>
+":map  :1b!<CR>
+":map  :2b!<CR>
+":map  :3b!<CR>
+":map  :4b!<CR>
+":map  :5b!<CR>
+":map  :6b!<CR>
+":map  :7b!<CR>
+":map  :8b!<CR>
+":map  :9b!<CR>
+":map  :10b!<CR>
+":map :badd 
+
+" Useful mappings for managing tabs
+:map <leader>tn :tabnew<cr>
+:map <leader><cr> :tabnew<cr>
+:map <leader>tc :tabclose<cr>
+":map <F1> :tabp<cr>
+":map OD :tabp<cr>
+:map <Leader><Left> :tabp<cr>
+:map <Leader><Right> :tabn<cr>
+":map <F2> :tabn<cr>
+":map <Esc>[1;9D :tabn<cr>
+":map [1;9D :tabn <cr>
+" map <leader>to :tabonly<cr>
+" map <leader>tm :tabmove
+:map & 1gt
+:map é 2gt
+:map " 3gt
+:map ' 4gt
+:map ( 5gt
+:map - 6gt
+:map è 7gt
+:map _ 8gt
+:map ç 9gt
+:map à 10gt
+
+" 
+" Smart way to move between windows
+:map <C-j> <C-W>j
+:map <C-k> <C-W>k
+:map <C-h> <C-W>h
+:map <C-l> <C-W>l
+
+
+:map <F4> :NERDTreeTabsClose<CR>:mksession ! session.vim<CR>:wqa!<CR>
+:map <F3> :NERDTreeTabsToggle<CR>
+
+" Fond transparent
+"hi Normal          ctermbg=none
+"
+:map Q vapgq
+:set mouse=r
+
+:set laststatus=2

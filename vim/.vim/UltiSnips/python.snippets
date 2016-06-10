@@ -1,0 +1,24 @@
+snippet charmodel
+$1 = models.CharField(max_length=${2:254})
+$0
+endsnippet
+
+snippet textmodel "Text field model for django"
+$1 = models.TextField()
+$0
+endsnippet
+
+snippet Model "django.db.models.Model class definition" b
+class $1(models.Model):
+	''' Docstring for $1 '''
+	name = models.Charfield(max_length=64)
+	$2
+	def __str__(self):
+		return '%s' % (self.name)
+
+$0
+endsnippet
+
+snippet DEBUGiprint "Print a variable for debugging purpose"
+print('${1:VAR} : '+str($1)) # DEBUG
+endsnippet
