@@ -1,12 +1,12 @@
-" ~/.dotfiles/vim/.vim/sessions/vimrc.vim:
+" ~/.dotfiles/vim/.vim/sessions/zsh.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 10 juin 2016 at 06:16:55.
+" Created by session.vim 2.13.1 on 10 juin 2016 at 14:17:46.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
 if exists('g:did_load_filetypes') != 1 | filetype on | endif
-if exists('g:did_load_ftplugin') != 0 | filetype plugin off | endif
-if exists('g:did_indent_on') != 0 | filetype indent off | endif
+if exists('g:did_load_ftplugin') != 1 | filetype plugin on | endif
+if exists('g:did_indent_on') != 1 | filetype indent on | endif
 if &background != 'dark'
 	set background=dark
 endif
@@ -17,22 +17,19 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/.dotfiles/vim
+cd ~/
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +87 ~/src/dotfiles/vimrc
-badd +1 .vim/vundle.vimrc
-badd +1 ~/.vimrc
-badd +1 ~.vim/main.vimrc
-badd +1 .vim/main.vimrc
-badd +1 UltiSnips/vim.snippets
+badd +0 .zshrc
+badd +0 .zsh/prompt.zsh
+badd +0 .zsh/zsh_modules.zsh
 argglobal
 silent! argdel *
-argadd ~/src/dotfiles/vimrc
+argadd .zshrc
 set stal=2
-edit ~/.vimrc
+edit .zshrc
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -48,13 +45,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 32) / 65)
+let s:l = 8 - ((7 * winheight(0) + 32) / 65)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 04|
-tabedit .vim/main.vimrc
+8
+normal! 039|
+tabedit .zsh/prompt.zsh
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -70,63 +67,19 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 32) / 65)
+let s:l = 2 - ((1 * winheight(0) + 32) / 65)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 0
-tabedit .vim/vundle.vimrc
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 32) / 65)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-tabedit ~/src/dotfiles/vimrc
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 32) / 65)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-4
-normal! 0
-tabnext 4
+2
+normal! 058|
+tabnext 2
 set stal=1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
 endif
 " unlet! s:wipebuf
-set winheight=1 winwidth=20 shortmess=filnxtToO
+set winheight=1 winwidth=20 shortmess=filnxtToOc
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
@@ -138,7 +91,7 @@ let &so = s:so_save | let &siso = s:siso_save
 " by :mksession out of the box).
 
 1wincmd w
-tabnext 4
+tabnext 2
 if exists('s:wipebuf')
   if empty(bufname(s:wipebuf))
 if !getbufvar(s:wipebuf, '&modified')
