@@ -3,3 +3,4 @@
 mutt/.mutt/passwords.gpg
 weechat/.weechat/logs
 weechat/.weechat/weechat.log
+weechat/.weechat/irc.conf
