@@ -16,6 +16,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Bling/vim-airline'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'ctrlpvim/ctrlp.vim' ""TO INSTALL LATER
 
 call vundle#end()
 filetype plugin indent on
@@ -120,3 +122,15 @@ let g:UltiSnipsSnippetsDirectory = ["~/.vim/snippets"]
 "	numbers.vim is a plugin for intelligently toggling line numbers.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	nathanaelkane/vim-indent-guides
+"	  - https://github.com/nathanaelkane/vim-indent-guides
+"
+"	Visually displays indent levels
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 2
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
