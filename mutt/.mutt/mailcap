@@ -1,0 +1,18 @@
+application/pdf; zathura '%s'; copiousoutput; description=PDF Document;
+nametemplate=%s.pdf
+
+application/vnd.oasis.opendocument.text; libreoffice '%s'; copiousoutput; description=OpenDocument Text;
+nametemplate=%s.odt
+application/vnd.oasis.opendocument.graphics; libreoffice '%s'; copiousoutput; description=OpenDocument Drawing;
+nametemplate=%s.odg
+application/vnd.oasis.opendocument.presentation; libreoffice '%s'; copiousoutput; description=OpenDocument Presentation;
+nametemplate=%s.odp
+application/vnd.oasis.opendocument.spreadsheet; libreoffice '%s'; copiousoutput; description=OpenDocument Spreadsheet;
+nametemplate=%s.ods
+application/vnd.oasis.opendocument.database; libreoffice '%s'; copiousoutput; description=OpenDocument Database;
+nametemplate=%s.odb
+
+#text/html; vimprobtab.sh %s &; test=test -n "$DISPLAY"; needsterminal;
+text/html; firefox %s; test=test -n "$DISPLAY"; needsterminal;
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+

@@ -1,0 +1,51 @@
+save-hook '~C afpy.org' =Linux.afpy
+save-hook '~C frnog.org' =frnog
+save-hook '~C aquilenet.fr' =Aquilenet
+save-hook '~C giroll.org' =GiroLL
+save-hook '~C labx.fr' =LaBx
+save-hook '~f labx.fr' =LaBx
+
+save-hook '~f cesi.fr' =TaF.CESI
+save-hook '~f nextgenrh.fr' =TaF.__NextGenRH
+save-hook '~f boxmyjob.com' =TaF.__Boxmyjob
+save-hook '~f freelancer.com' =TaF.__Freelancers
+save-hook '~f beepjob.com' =TaF.__Beepjob
+save-hook '~f remixjobs.com' =TaF.__RemixJobs
+save-hook '~f qapa.fr' =TaF.__Qapa
+
+save-hook '~f caf.fr' =Administration.Caf
+save-hook '~f pole-emploi.info' =Administration.PoleEmploi
+save-hook '~f pole-emploi.fr' =Administration.PoleEmploi
+
+save-hook '~f mediapart.fr' =NewsLetters.Mediapart
+save-hook '~f youtube.com' =NewsLetters.Youtube
+save-hook '~f mariadb.com' =NewsLetters.mariadb
+save-hook '~f slant.co' =NewsLetters.Slant
+save-hook '~f numerama.com' =NewsLetters.Numerama
+save-hook '~f developpez.com' =NewsLetters.Developpez_com
+save-hook '~f snootlab.com' =NewsLetters.SnootLab
+save-hook '~f framalistes.org' =NewsLetters.Framasoft
+
+save-hook '~C vobject@noreply.github.com' =Github.vobject
+save-hook '~C keychain@noreply.github.com' =Github.keychain
+
+save-hook '~f yunohost.org' =Linux.Yunohost
+
+save-hook '~f mxtoolbox.com' =root
+save-hook '~f wordpress@microcheap.info' =root
+
+save-hook '~f twitter.com' =Social
+save-hook '~f linkedin.com' =Social
+
+save-hook '~f paypal.fr' =Shopping.Paypal
+save-hook '~f discogs.com' =Shopping.Discogs
+
+save-hook '~f openclassrooms.com' =NewsLetters.OpenClassRooms
+
+save-hook '~f studio.akoufen@gmail.com' =BordeauxByNight.AkoufenStudio
+save-hook '~f diffusion@alphonse-prod.org' =BordeauxByNight.AlphonseProd
+
+save-hook '~f feuzzz.com' =Spam
+save-hook '~f assurland.com' =Spam
+
+save-hook '~f loris.hilaire@aquilenet.fr' =Perso.loris_hilaire
