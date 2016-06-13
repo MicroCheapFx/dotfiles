@@ -1,12 +1,12 @@
 " ~/.dotfiles/vim/.vim/sessions/vimrc.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 10 juin 2016 at 06:16:55.
+" Created by session.vim 2.13.1 on 13 juin 2016 at 14:37:16.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
 if exists('g:did_load_filetypes') != 1 | filetype on | endif
-if exists('g:did_load_ftplugin') != 0 | filetype plugin off | endif
-if exists('g:did_indent_on') != 0 | filetype indent off | endif
+if exists('g:did_load_ftplugin') != 1 | filetype plugin on | endif
+if exists('g:did_indent_on') != 1 | filetype indent on | endif
 if &background != 'dark'
 	set background=dark
 endif
@@ -70,11 +70,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 32) / 65)
+let s:l = 12 - ((11 * winheight(0) + 32) / 65)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
+12
 normal! 0
 tabedit .vim/vundle.vimrc
 set splitbelow splitright
@@ -114,13 +114,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 32) / 65)
+let s:l = 131 - ((0 * winheight(0) + 32) / 65)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
+131
 normal! 0
-tabnext 4
+tabnext 2
 set stal=1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -138,7 +138,7 @@ let &so = s:so_save | let &siso = s:siso_save
 " by :mksession out of the box).
 
 1wincmd w
-tabnext 4
+tabnext 2
 if exists('s:wipebuf')
   if empty(bufname(s:wipebuf))
 if !getbufvar(s:wipebuf, '&modified')

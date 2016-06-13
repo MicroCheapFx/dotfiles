@@ -17,7 +17,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Bling/vim-airline'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'ctrlpvim/ctrlp.vim' ""TO INSTALL LATER
+Plugin 'ctrlpvim/ctrlp.vim' 
 
 call vundle#end()
 filetype plugin indent on
@@ -134,3 +134,12 @@ let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 2
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	ctrlpvim/ctrlp.vim
+"	  - https://github.com/ctrlpvim/ctrlp.vim
+"
+"	
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
