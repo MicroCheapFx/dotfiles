@@ -5,6 +5,8 @@ set softtabstop =4
 set hlsearch
 set noexpandtab
 
+set fdm=syntax
+
 set number
 let mapleader = ","
 

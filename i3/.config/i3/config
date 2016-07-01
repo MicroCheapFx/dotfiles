@@ -66,6 +66,8 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioMute exec amixer set Master toggle
 
+bindsym XF86Sleep exec i3lock
+
 # switch to workspace
 bindsym $mod+ampersand workspace 1
 bindsym $mod+eacute workspace 2
