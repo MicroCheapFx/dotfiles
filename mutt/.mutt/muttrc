@@ -53,6 +53,8 @@ macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 set sort=threads
 set sort_aux=last-date-received
 
+set editor="vim "
+
 set query_command= "khard email -p %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete

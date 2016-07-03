@@ -18,6 +18,8 @@ Plugin 'Bling/vim-airline'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'ctrlpvim/ctrlp.vim' 
+Plugin 'vim-scripts/taglist.vim' 
+Plugin 'jakedouglas/exuberant-ctags' 
 
 call vundle#end()
 filetype plugin indent on
@@ -143,3 +145,18 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	vim-scripts/taglist.vim
+"	  - https://github.com/vim-scripts/taglist.vim
+"
+"	
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	jakedouglas/exuberant-ctags
+"	  - https://github.com/jakedouglas/exuberant-ctags
+"
+"	
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
